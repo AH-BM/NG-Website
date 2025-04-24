@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="cars, porsche, sports">
+    <title>Cars</title>
+    <link rel="stylesheet" type="text/css" href="./styles/styles.css">
+    <script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+    <nav>
+        <a href="index.html" target="_self">Home Page</a>
+        <a href="test.html" target="_self">Test Page</a>
+        <a href="https://www.bing.com" target="_self">Bing</a>
+        <a href="mailto:aneeshasan27@gmail.com?cc=anees.hasan@version1.com, &subject=Test&body=Test2" title="test email">Send Email</a>
+    </nav>
+    <br>
+    <button onclick="changeBgColor()">Change Background color</button>
+    <button onclick="increasePTextSize()">Increase paragraph text size</button>
+    <button onclick="decreasePTextSize()">Decrease paragraph text size</button>
+    <button onclick="increaseLiTextSize()">Increase list item text size</button>
+    <h1 style="font-style:italic">Cars</h1>
+    <ul>
+        <li>Introduction</li>
+        <li>Brands</li>
+        <li>Media</li>
+    </ul>
+    <h2>About <strong style="color:#4B0082;font-style:italic">Cars</strong></h2>
+    <h3 id="one">What is a car?</h3>
+    <p >A car, also known as an automobile, is a wheeled motor vehicle used for transportation. Most cars are designed to run primarily on roads, have seating for one to eight people, typically have four wheels, and are constructed mainly for the transport of people rather than goods. They are powered by internal combustion engines or electric motors and come in various shapes, sizes, and styles to suit different needs and preferences.</p>
+    <h2><strong style="color:#4B0082;font-style:italic">Car</strong> Brands</h2>
+    <h3>Some of the most popular car brands (in order of total sales) include:</h3>
+    <ol>
+        <li>Toyota - 250 Million+</li>
+        <br>
+        <li>Volkswagen (VW) - 200 Million+</li>
+        <br>
+        <li>Ford - 150 Million+</li>
+        <br>
+        <li>Honda - 130 Million+</li>
+        <br>
+        <li>Nissan - 120 Million+</li>
+        <br>
+        <li>General Motors (GM) - 100 Million+</li>
+        <br>
+        <li>Hyundai - 90 Million+</li>
+        <br>
+        <li>BMW - 80 Million+</li>
+        <br>
+        <li>Mercedes-Benz - 70 Million+</li>
+        <br>
+        <li>Kia - 60 Million+</li>
+    </ol>
+    <h2>Media</h2>
+    <img src="./images/images.jpg" height="300px" width="500px">
+    <video height="300px" width="500px" controls muted autoplay loop>
+        <source src="./videos/car_video.mp4" type="video/mp4">
+    </video>
+    <h1>Mailing List</h1>
+    <form onsubmit="return analyseForm()">
+        <p>First Name</p>
+        <input type="text" size="52" id="first_name" name="First Name" value="" required>
+        <br>
+        <p>Last Name</p>
+        <input type="text" size="52" id="last_name" name="Last Name" value="" required>
+        <br>
+        <p>Email Address</p>
+        <input type="email" size="52" id="email" name="email" required>
+        <p>What is your phone number?</p>
+        <input type="number" id="phone_num" name="phone number">
+        <br>
+        <br>
+        <input type="submit" name="submit_form" id="submit form" value="Submit">
+    </form>
+    <br>
+    <br>
+    <br>
+    <form onsubmit="return selectedAgeWage()">
+        <label id="radio16_17label" for="radio16_17">16 - 17</label>
+        <input type="radio" id="radio16_17" name="age_radio_collection" value="£4.81">
+        <br>
+        <br>
+        <label id="radio18_20label" for="radio18_20">18 - 20</label>
+        <input type="radio" id="radio18_20" name="age_radio_collection" value="£6.83">
+        <br>
+        <br>
+        <label id="radio21_22label" for="radio21_22">21 - 22</label>
+        <input type="radio" id="radio21_22" name="age_radio_collection" value="£9.18">
+        <br>
+        <br>
+        <label id="radio23+label" for="radio23+">23+</label>
+        <input type="radio" id="radio23+" name="age_radio_collection" value="£9.50">
+        <br>
+        <br>
+        <input type="submit" name="submit__form" id="submit_form" value="Submit">
+    </form>
+    <br>
+    <label id="hide_label" for="hide">Hide</label>
+    <input onclick="return hide()" type="checkbox" id="hide" name="checkbox_hide" value="">
+    <br>
+</body>
+</html>
