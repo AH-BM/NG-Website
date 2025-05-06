@@ -1,0 +1,17 @@
+name: GitHub Custom Actions
+on: workflow_dispatch
+
+jobs:
+  checkout-git-repo:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repo
+        run: git clone https://github.com/AH-BM/NG-Website
+#        uses: actions/checkout@v4
+      - name: Install Tree
+        run: sudo apt install tree -y
+      - name: Investigate Repo
+        run: |
+          pwd
+          tree -a
