@@ -1,0 +1,12 @@
+name: Demo Github Actions
+on: workflow_dispatch
+
+jobs:
+  first-demo-job: 
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: First Step
+        run: echo "This is a step within a job within a workflow"
+      - name: List All Files in Current Directory
+        run: ls -lart
