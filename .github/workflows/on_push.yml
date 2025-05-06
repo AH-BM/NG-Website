@@ -1,0 +1,13 @@
+name: GitHub Actions On Push
+on: push
+
+jobs:
+  on-push-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Demo Runs
+        run: |
+          echo "Message to the console"
+          ls -lart
+          pwd
