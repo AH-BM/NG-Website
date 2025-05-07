@@ -18,4 +18,12 @@ jobs:
           sudo systemctl start nginx
       - name: Test Web Service
         run: python3 -c "import requests; r=requests.get('http://localhost:80');print(r.status_code)"
-        #curl localhost:80
+        # run: curl localhost:80
+
+  testing-api-availability:
+    needs: [clone-website-and-run-podman]
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Ping the Service
+        run: ping 8.8.8.8 -n 4
