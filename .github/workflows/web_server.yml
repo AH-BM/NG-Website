@@ -9,10 +9,13 @@ jobs:
       - name: Git Clone Repo
         run: git clone https://github.com/AH-BM/NG-Website
       - name: Check Website Files
-        run: ls -lart
+        run: ls -lart /usr/share/nginx/html/
       - name: Move Website Files
-        run: sudo mv ./NG-Website/* /usr/share/nginx/html
-      - name: Start Nginx Service
-        run: sudo systemctl start nginx
+        run: sudo mv ./NG-Website/* /usr/share/nginx/html/
+      - name: Start and Enable Nginx Service
+        run: |
+          sudo systemctl enable nginx
+          sudo systemctl start nginx
       - name: Test Web Service
-        run: python3 -c "import requests; r=requests.get('http://localhost:8080');print(r.status_code)"
+        run: python3 -c "import requests; r=requests.get('http://localhost:80');print(r.status_code)"
+        #curl localhost:80
