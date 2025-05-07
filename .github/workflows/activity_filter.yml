@@ -1,0 +1,17 @@
+name: Activity_Filters
+on:
+  workflow_dispatch:
+  pull_request:
+    types: [opened, synchronize]
+  push:
+    branches:
+      - 'dev*'
+      - main
+
+jobs:
+  any-old-job-demo:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Any old step
+        run: echo "yabba dabba do"
