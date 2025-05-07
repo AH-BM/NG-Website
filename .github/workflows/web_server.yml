@@ -1,0 +1,18 @@
+name: Deploying Multiple Runners
+on: workflow_dispatch
+
+jobs:
+  clone-website-and-run-podman:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Git Clone Repo
+        run: git clone https://github.com/AH-BM/NG-Website
+      - name: Check Website Files
+        run: ls -lart
+      - name: Move Website Files
+        run: sudo mv ./NG-Website/* /usr/share/nginx/html
+      - name: Start Nginx Service
+        run: sudo systemctl start nginx
+      - name: Test Web Service
+        run: python3 -c "import requests; r=requests.get('http://localhost:8080');print(r.status_code)"
