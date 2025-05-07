@@ -15,4 +15,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: my_file_to_download
-          path: /home/runner/work/NG-Website/my_file_to_download
+          path: /home/runner/work/NG-Website/NG-Website/my_file_to_download
