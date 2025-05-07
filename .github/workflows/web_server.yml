@@ -26,4 +26,4 @@ jobs:
 
     steps:
       - name: Ping the Service
-        run: ping 8.8.8.8 -n 4
+        run: ping 8.8.8.8
